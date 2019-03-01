@@ -17,7 +17,7 @@
 # limitations under the License.
 
 api_key_env: MK_CROWDIN_API_KEY
-base_path_env: MK_CROWDIN_BASE_PATH_PIE
+base_path_env: MK_CROWDIN_BASE_PATH_MKP
 project_identifier: mokee-opensource
 preserve_hierarchy: true
 
