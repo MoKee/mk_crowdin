@@ -3,10 +3,11 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to LineageOS' Gerrit.
+# directly to MoKee Open Source's Gerrit.
 #
 # Copyright (C) 2014-2016 The CyanogenMod Project
 # Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2017-2019 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -220,7 +221,7 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push('ssh://%s@review.lineageos.org:29418/%s' % (username, name),
+        repo.git.push('ssh://%s@mokeedev.review:29418/%s' % (username, name),
                       'HEAD:refs/for/%s%%topic=translation' % branch)
         print('Successfully pushed commit for %s' % name)
     except:
@@ -232,7 +233,7 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
 def submit_gerrit(branch, username):
     # Find all open translation changes
     cmd = ['ssh', '-p', '29418',
-        '{}@review.lineageos.org'.format(username),
+        '{}@mokeedev.review'.format(username),
         'gerrit', 'query',
         'status:open',
         'branch:{}'.format(branch),
@@ -254,7 +255,7 @@ def submit_gerrit(branch, username):
             continue
         # Add Code-Review +2 and Verified+1 labels and submit
         cmd = ['ssh', '-p', '29418',
-        '{}@review.lineageos.org'.format(username),
+        '{}@mokeedev.review'.format(username),
         'gerrit', 'review',
         '--verified +1',
         '--code-review +2',
@@ -292,9 +293,9 @@ def find_xml(base_path):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Synchronising LineageOS' translations with Crowdin")
+        description="Synchronising MoKee Open Source's translations with Crowdin")
     parser.add_argument('-u', '--username', help='Gerrit username')
-    parser.add_argument('-b', '--branch', help='LineageOS branch',
+    parser.add_argument('-b', '--branch', help='MoKee branch',
                         required=True)
     parser.add_argument('-c', '--config', help='Custom yaml config')
     parser.add_argument('--upload-sources', action='store_true',
@@ -480,7 +481,7 @@ def main():
         sys.exit(0)
 
     base_path_branch_suffix = default_branch.replace('-', '_').replace('.', '_').upper()
-    base_path_env = 'LINEAGE_CROWDIN_BASE_PATH_%s' % base_path_branch_suffix
+    base_path_env = 'MK_CROWDIN_BASE_PATH_%s' % base_path_branch_suffix
     base_path = os.getenv(base_path_env)
     if base_path is None:
         cwd = os.getcwd()
@@ -497,20 +498,11 @@ def main():
     if xml_android is None:
         sys.exit(1)
 
-    xml_extra = load_xml(x='%s/config/%s_extra_packages.xml'
-                           % (_DIR, default_branch))
-    if xml_extra is None:
-        sys.exit(1)
-
-    xml_snippet = load_xml(x='%s/android/snippets/lineage.xml' % base_path)
-    if xml_snippet is None:
-        xml_snippet = load_xml(x='%s/android/snippets/cm.xml' % base_path)
-    if xml_snippet is None:
-        xml_snippet = load_xml(x='%s/android/snippets/hal_cm_all.xml' % base_path)
+    xml_snippet = load_xml(x='%s/android/snippets/mokee.xml' % base_path)
     if xml_snippet is not None:
-        xml_files = (xml_android, xml_snippet, xml_extra)
+        xml_files = (xml_android, xml_snippet)
     else:
-        xml_files = (xml_android, xml_extra)
+        xml_files = (xml_android)
 
     if args.config:
         files = ['%s/config/%s' % (_DIR, args.config)]

@@ -1,9 +1,8 @@
-# lineage-15.1.yaml
+# crowdin_mk.yaml
 #
-# Crowdin configuration file for LineageOS
+# Crowdin configuration file for MoKee Open Source
 #
-# Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2018-2019 The MoKee Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,17 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api_key_env: LINEAGE_CROWDIN_API_KEY
-base_path_env: LINEAGE_CROWDIN_BASE_PATH_LINEAGE_15_1
-project_identifier: lineageos
+api_key_env: MK_CROWDIN_API_KEY
+base_path_env: MK_CROWDIN_BASE_PATH_OREO
+project_identifier: mokee-opensource
 preserve_hierarchy: true
 
 files:
-# Frameworks
-
-  # framework-res
+  # Default for AOSP projects with MK additions
   -
-    source:      '/frameworks/base/core/res/res/values/cm_strings.xml'
+    source:      '/**/values/mk_*.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -41,11 +38,11 @@ files:
         ar: ar
         # Armenian
         hy-AM: hy
-        # Arpitan - LineageOS
+        # Arpitan - MoKee
         frp: frp
-        # Assamese - LineageOS
+        # Assamese - MoKee
         as: as-rIN
-        # Asturian - LineageOS
+        # Asturian - MoKee
         ast: ast-rES
         # Azerbaijani
         az: az
@@ -57,7 +54,7 @@ files:
         bn: bn
         # Bosnian
         bs: bs
-        # Breton - LineageOS
+        # Breton - MoKee
         br-FR: br-rFR
         # Bulgarian
         bg: bg
@@ -87,11 +84,11 @@ files:
         en-IN: en-rIN
         # English, United Kingdom
         en-GB: en-rGB
-        # Esperanto - LineageOS
+        # Esperanto - MoKee
         eo: eo
         # Estonian
         et: et
-        # Filipino - LineageOS
+        # Filipino - MoKee
         fil: fil
         # Finnish
         fi: fi
@@ -99,7 +96,7 @@ files:
         fr: fr
         # French, Canada
         fr-CA: fr-rCA
-        # Frisian - LineageOS
+        # Frisian - MoKee
         fy-NL: fy-rNL
         # Galician
         gl: gl
@@ -121,17 +118,17 @@ files:
         is: is
         # Indonesian
         id: in
-        # Irish - LineageOS
+        # Irish - MoKee
         ga-IE: ga-rIE
         # Italian
         it: it
         # Japanese
         ja: ja
-        # Kabyle - LineageOS
+        # Kabyle - MoKee
         kab: kab-rDZ
         # Kannada
         kn: kn
-        # Kashubian - LineageOS
+        # Kashubian - MoKee
         csb: csb
         # Kazakh
         kk: kk
@@ -139,7 +136,7 @@ files:
         km: km
         # Korean
         ko: ko
-        # Kurdish - LineageOS
+        # Kurdish - MoKee
         ku: ku
         # Kyrgyz
         ky: ky
@@ -149,7 +146,7 @@ files:
         lv: lv
         # Lithuanian
         lt: lt
-        # Luxembourgish - LineageOS
+        # Luxembourgish - MoKee
         lb: lb
         # Macedonian (FYROM)
         mk: mk
@@ -165,13 +162,13 @@ files:
         ne-NP: ne
         # Norwegian Bokmal
         nb: nb
-        # Occitan - LineageOS
+        # Occitan - MoKee
         oc: oc
-        # Oriya - LineageOS
+        # Oriya - MoKee
         or: or-rIN
         # Persian
         fa: fa
-        # Pirate English - LineageOS
+        # Pirate English - MoKee
         en-PT: en-rPT
         # Polish
         pl: pl
@@ -183,13 +180,13 @@ files:
         pa-IN: pa
         # Romanian
         ro: ro
-        # Romansh - LineageOS
+        # Romansh - MoKee
         rm-CH: rm
         # Russian
         ru: ru
-        # Sardinian - LineageOS
+        # Sardinian - MoKee
         sc: sc-rIT
-        # Scottish Gaelic - LineageOS
+        # Scottish Gaelic - MoKee
         gd: gd
         # Serbian (Cyrillic)
         sr: sr
@@ -203,9 +200,9 @@ files:
         sl: sl
         # Spanish
         es-ES: es
-        # Spanish, Colombia - LineageOS
+        # Spanish, Colombia - MoKee
         es-CO: es-rCO
-        # Spanish, Mexico - LineageOS
+        # Spanish, Mexico - MoKee
         es-MX: es-rMX
         # Spanish, United States
         es-US: es-rUS
@@ -227,168 +224,200 @@ files:
         uk: uk
         # Urdu (Pakistan)
         ur-PK: ur
-        # Uyghur - LineageOS
+        # Uyghur - MoKee
         ug: ug
         # Uzbek
         uz: uz
-        # Venetian - LineageOS
+        # Venetian - MoKee
         vec: vec
         # Vietnamese
         vi: vi
-        # Welsh - LineageOS
+        # Welsh - MoKee
         cy: cy
         # Zulu
         zu: zu
+    ignore:
+      - /**/mk_analytics.xml
+      - /**/mk_attrs.xml
+      - /**/mk_bools.xml
+      - /**/mk_colors.xml
+      - /**/mk_config.xml
+      - /**/mk_dimens.xml
+      - /**/mk_extra.xml
+      - /**/mk_integers.xml
+      - /**/mk_styles.xml
+      - /**/mk_symbols.xml
+      - /**/mk*donottranslate*.xml
+      - /device/**/overlay/**/*.xml
+      - /development/**/*.xml
+
+# Other projects
+
+  # Device - OnePlus Common
+  -
+    source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Frameworks-base
+  -
+    source:      '/frameworks/base/core/res/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # SettingsLib
   -
-    source:      '/frameworks/base/packages/SettingsLib/res/values/cm_strings.xml'
+    source:      '/frameworks/base/packages/SettingsLib/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # SystemUI
   -
-    source:      '/frameworks/base/packages/SystemUI/res/values/cm_strings.xml'
+    source:      '/frameworks/base/packages/SystemUI/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-# Packages
+  # Hardware/samsung/AdvancedDisplay
+  -
+    source:      '/hardware/samsung/AdvancedDisplay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # MoKee-SDK
+  -
+    source:      '/mokee-sdk/mk/res/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # MoKee-SDK - MKSettingsProvider
+  -
+    source:      '/mokee-sdk/packages/MKSettingsProvider/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Aegis
+  -
+    source:      '/packages/apps/Aegis/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # AudioFX
   -
-    source:      '/packages/apps/AudioFX/res/values/cm_strings.xml'
+    source:      '/packages/apps/AudioFX/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/AudioFX/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Calendar
+  -
+    source:      '/packages/apps/Calendar/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Camera2
   -
-    source:      '/packages/apps/Camera2/res/values/cm_strings.xml'
+    source:      '/packages/apps/Camera2/app/src/main/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Contacts
   -
-    source:      '/packages/apps/Contacts/res/values/cm_strings.xml'
+    source:      '/packages/apps/Contacts/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # DeskClock
   -
-    source:      '/packages/apps/DeskClock/res/values/cm_strings.xml'
+    source:      '/packages/apps/DeskClock/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Dialer
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/cm_strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/calldetails/res/values/cm_strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/calldetails/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/cm_strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/cm_arrays.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/cm_plurals.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/cm_strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/cm_strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/incallui/contactgrid/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Dialer/java/com/android/incallui/contactgrid/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Eleven
-  -
-    source:      '/packages/apps/Eleven/res/values/plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Eleven/res/values/strings.xml'
+    source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Email
   -
-    source:      '/packages/apps/Email/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Exchange
-  -
-    source:      '/packages/apps/Exchange/res/values/strings.xml'
+    source:      '/packages/apps/Email/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # FMRadio
   -
-    source:      '/packages/apps/FMRadio/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/FMRadio/res/values/strings.xml'
+    source:      '/packages/apps/FMRadio/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Gallery2
   -
-    source:      '/packages/apps/Gallery2/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Gallery2/res/values/codeaurora_strings.xml'
+    source:      '/packages/apps/Gallery2/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Jelly
+  # Lawnchair
   -
-    source:      '/packages/apps/Jelly/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # LineageParts
-  -
-    source:      '/packages/apps/LineageParts/res/values/plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/LineageParts/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # LockClock
-  -
-    source:      '/packages/apps/LockClock/res/values/strings.xml'
+    source:      '/packages/apps/Lawnchair/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Messaging
   -
-    source:      '/packages/apps/Messaging/res/values/cm_strings.xml'
+    source:      '/packages/apps/Messaging/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Profiles
+  # MKCenter2
   -
-    source:      '/packages/apps/Profiles/res/values/strings.xml'
+    source:      '/packages/apps/MKCenter2/app/src/main/res/values/plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKCenter2/app/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # MKParts
+  -
+    source:      '/packages/apps/MKParts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Phonograph
+  -
+    source:      '/packages/apps/Phonograph/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -400,11 +429,11 @@ files:
 
   # Settings
   -
-    source:      '/packages/apps/Settings/res/values/cm_plurals.xml'
+    source:      '/packages/apps/Settings/res/values/ext_plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/Settings/res/values/cm_strings.xml'
+    source:      '/packages/apps/Settings/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -414,9 +443,15 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+  # SimpleCommons
+  -
+    source:      '/packages/apps/SimpleCommons/commons/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # Snap
   -
-    source:      '/packages/apps/Snap/res/values/cm_strings.xml'
+    source:      '/packages/apps/Snap/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
@@ -427,147 +462,55 @@ files:
     source:      '/packages/apps/Snap/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Snap/quickReader/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Terminal
-  -
-    source:      '/packages/apps/Terminal/res/values/arrays.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Terminal/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Trebuchet
-  -
-    source:      '/packages/apps/Trebuchet/res/values/lineage_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Updater
-  -
-    source:      '/packages/apps/Updater/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
 
   # WallpaperPicker
   -
-    source:      '/packages/apps/WallpaperPicker/res/values/cm_strings.xml'
+    source:      '/packages/apps/WallpaperPicker/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
-# Input methods
+  -
+    source:      '/packages/apps/WallpaperPicker/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # LatinIME
   -
-    source:      '/packages/inputmethods/LatinIME/java/res/values/cm_strings.xml'
+    source:      '/packages/inputmethods/LatinIME/java/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
-# Providers
 
   # DownloadProvider
   -
-    source:      '/packages/providers/DownloadProvider/res/values/cm_plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/providers/DownloadProvider/res/values/cm_strings.xml'
+    source:      '/packages/providers/DownloadProvider/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # WeatherProvider
+  # MoKeeWeatherProvider
   -
-    source:      '/packages/providers/WeatherProvider/res/values/strings.xml'
+    source:      '/packages/providers/MoKeeWeatherProvider/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-# Services
+  # MoKeePay
+  -
+    source:      '/packages/resources/MoKeePay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # MKUpdateVerification
+  -
+    source:      '/packages/services/MKUpdateVerification/app/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Mms
   -
-    source:      '/packages/services/Mms/res/values/cm_strings.xml'
+    source:      '/packages/services/Mms/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # Telephony
   -
-    source:      '/packages/services/Telephony/res/values/cm_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-# Lineage SDK
-
-  # Lineage SDK
-  -
-    source:      '/lineage-sdk/lineage/res/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # LineageSettingsProvider
-  -
-    source:      '/lineage-sdk/packages/LineageSettingsProvider/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # OpenWeatherMapProvider
-  -
-    source:      '/lineage-sdk/samples/weatherproviderservice/OpenWeatherMapProvider/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-# Device specific
-
-  # fmapp2
-  -
-    source:      '/hardware/qcom/fm/fmapp2/res/values/arrays.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/hardware/qcom/fm/fmapp2/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # FMRecord
-  -
-    source:      '/hardware/qcom/fm/FMRecord/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # oppo common configpanel
-  -
-    source:      '/device/oppo/common/configpanel/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # oppo r5 otgtoggle
-  -
-    source:      '/device/oppo/r5/otgtoggle/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # samsung AdvancedDisplay
-  -
-    source:      '/hardware/samsung/AdvancedDisplay/res/values/arrays.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/hardware/samsung/AdvancedDisplay/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # resources devicesettings
-  -
-    source:      '/packages/resources/devicesettings/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # FlipFlap
-  -
-    source:      '/packages/apps/FlipFlap/res/values/strings.xml'
+    source:      '/packages/services/Telephony/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
