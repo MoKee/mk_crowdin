@@ -354,12 +354,6 @@ def upload_sources_crowdin(branch, config):
                    '--config=%s/config/%s.yaml' % (_DIR, branch),
                    'upload', 'sources', '--branch=%s' % branch])
 
-        print('\nUploading sources to Crowdin (non-AOSP supported languages)')
-        check_run(['crowdin',
-                   '--config=%s/config/%s_aosp.yaml' % (_DIR, branch),
-                   'upload', 'sources', '--branch=%s' % branch])
-
-
 def upload_translations_crowdin(branch, config):
     if config:
         print('\nUploading translations to Crowdin (custom config)')
@@ -377,15 +371,6 @@ def upload_translations_crowdin(branch, config):
                    '--no-import-duplicates', '--import-eq-suggestions',
                    '--auto-approve-imported'])
 
-        print('\nUploading translations to Crowdin '
-              '(non-AOSP supported languages)')
-        check_run(['crowdin',
-                   '--config=%s/config/%s_aosp.yaml' % (_DIR, branch),
-                   'upload', 'translations', '--branch=%s' % branch,
-                   '--no-import-duplicates', '--import-eq-suggestions',
-                   '--auto-approve-imported'])
-
-
 def download_crowdin(base_path, branch, xml, username, config):
     if config:
         print('\nDownloading translations from Crowdin (custom config)')
@@ -399,20 +384,13 @@ def download_crowdin(base_path, branch, xml, username, config):
                    '--config=%s/config/%s.yaml' % (_DIR, branch),
                    'download', '--branch=%s' % branch])
 
-        print('\nDownloading translations from Crowdin '
-              '(non-AOSP supported languages)')
-        check_run(['crowdin',
-                   '--config=%s/config/%s_aosp.yaml' % (_DIR, branch),
-                   'download', '--branch=%s' % branch])
-
     print('\nCreating a list of pushable translations')
     # Get all files that Crowdin pushed
     paths = []
     if config:
         files = ['%s/config/%s' % (_DIR, config)]
     else:
-        files = ['%s/config/%s.yaml' % (_DIR, branch),
-                 '%s/config/%s_aosp.yaml' % (_DIR, branch)]
+        files = ['%s/config/%s.yaml' % (_DIR, branch)]
     for c in files:
         cmd = ['crowdin', '--config=%s' % c, 'list', 'project',
                '--branch=%s' % branch]
@@ -507,8 +485,7 @@ def main():
     if args.config:
         files = ['%s/config/%s' % (_DIR, args.config)]
     else:
-        files = ['%s/config/%s.yaml' % (_DIR, default_branch),
-                 '%s/config/%s_aosp.yaml' % (_DIR, default_branch)]
+        files = ['%s/config/%s.yaml' % (_DIR, default_branch)]
     if not check_files(files):
         sys.exit(1)
 
