@@ -265,6 +265,10 @@ files:
 
   # SettingsLib
   -
+    source:      '/frameworks/base/packages/SettingsLib/res/values/ext_arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
     source:      '/frameworks/base/packages/SettingsLib/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
