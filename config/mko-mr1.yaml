@@ -491,12 +491,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # MoKeePay
-  -
-    source:      '/packages/resources/MoKeePay/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # MKUpdateVerification
   -
     source:      '/packages/services/MKUpdateVerification/app/src/main/res/values/strings.xml'
