@@ -22,9 +22,11 @@ project_identifier: mokee-opensource
 preserve_hierarchy: true
 
 files:
-  # Default for AOSP projects with MK additions
+# Frameworks
+
+  # framework-res
   -
-    source:      '/**/values/mk_*.xml'
+    source:      '/frameworks/base/core/res/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -236,20 +238,11 @@ files:
         cy: cy
         # Zulu
         zu: zu
-    ignore:
-      - /**/mk_analytics.xml
-      - /**/mk_attrs.xml
-      - /**/mk_bools.xml
-      - /**/mk_colors.xml
-      - /**/mk_config.xml
-      - /**/mk_dimens.xml
-      - /**/mk_extra.xml
-      - /**/mk_integers.xml
-      - /**/mk_styles.xml
-      - /**/mk_symbols.xml
-      - /**/mk*donottranslate*.xml
-      - /device/**/overlay/**/*.xml
-      - /development/**/*.xml
+  -
+    source:      '/frameworks/base/core/res/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
 
 # Other projects
 
@@ -259,19 +252,25 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Frameworks-base
+  # SettingsLib
   -
-    source:      '/frameworks/base/core/res/res/values/ext_strings.xml'
+    source:      '/frameworks/base/packages/SettingsLib/res/values/mk_arrays.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
-  # SettingsLib
   -
     source:      '/frameworks/base/packages/SettingsLib/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
   # SystemUI
+  -
+    source:      '/frameworks/base/packages/SystemUI/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/frameworks/base/packages/SystemUI/res-mokee/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   -
     source:      '/frameworks/base/packages/SystemUI/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -302,6 +301,10 @@ files:
     languages_mapping: *anchor
 
   # AudioFX
+  -
+    source:      '/packages/apps/AudioFX/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   -
     source:      '/packages/apps/AudioFX/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -337,6 +340,14 @@ files:
 
   # Dialer
   -
+    source:      '/packages/apps/Dialer/java/com/android/contacts/common/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
     source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
@@ -357,11 +368,19 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/dialpadview/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
     source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
     source:      '/packages/apps/Dialer/java/com/android/incallui/contactgrid/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/mk_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
@@ -395,6 +414,10 @@ files:
 
   # Messaging
   -
+    source:      '/packages/apps/Messaging/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
     source:      '/packages/apps/Messaging/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
@@ -410,6 +433,10 @@ files:
     languages_mapping: *anchor
 
   # MKParts
+  -
+    source:      '/packages/apps/MKParts/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   -
     source:      '/packages/apps/MKParts/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -428,6 +455,10 @@ files:
     languages_mapping: *anchor
 
   # Settings
+  -
+    source:      '/packages/apps/Settings/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   -
     source:      '/packages/apps/Settings/res/values/ext_plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -485,9 +516,13 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # MoKeeWeatherProvider
+  # WeatherProvider
   -
-    source:      '/packages/providers/MoKeeWeatherProvider/res/values/strings.xml'
+    source:      '/packages/providers/WeatherProvider/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/providers/WeatherProvider/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
