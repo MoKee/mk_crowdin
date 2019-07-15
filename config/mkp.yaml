@@ -531,6 +531,12 @@ files:
 
 # Resources
 
+  # Aegis
+  -
+    source:      '/packages/resources/Aegis/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # devicesettings
   -
     source:      '/packages/resources/devicesettings/res/values/strings.xml'
