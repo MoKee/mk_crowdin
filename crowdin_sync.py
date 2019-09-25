@@ -549,11 +549,16 @@ def main():
     if xml_android is None:
         sys.exit(1)
 
+    xml_extra = load_xml(x='%s/config/%s_extra_packages.xml'
+                           % (_DIR, default_branch))
+    if xml_extra is None:
+        sys.exit(1)
+
     xml_snippet = load_xml(x='%s/android/snippets/mokee.xml' % base_path)
     if xml_snippet is not None:
-        xml_files = (xml_android, xml_snippet)
+        xml_files = (xml_android, xml_snippet, xml_extra)
     else:
-        xml_files = (xml_android)
+        xml_files = (xml_android, xml_extra)
 
     if args.config:
         files = ['%s/config/%s' % (_DIR, args.config)]
