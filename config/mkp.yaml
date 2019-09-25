@@ -1,4 +1,4 @@
-# crowdin_mk.yaml
+# mkp.yaml
 #
 # Crowdin configuration file for MoKee Open Source
 #
@@ -539,12 +539,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # devicesettings
-  -
-    source:      '/packages/resources/devicesettings/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # MoKeePay
   -
     source:      '/packages/resources/MoKeePay/res/values/strings.xml'
@@ -567,14 +561,20 @@ files:
 
 # Device specific
 
-  # Device - OnePlus Common
+  # OnePlus Common ConfigPanel
   -
     source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Hardware/samsung/AdvancedDisplay
+  # Samsung AdvancedDisplay
   -
     source:      '/hardware/samsung/AdvancedDisplay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Resources DeviceSettings
+  -
+    source:      '/packages/resources/devicesettings/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor

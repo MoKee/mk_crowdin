@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Extra packages not included in the main manifest -->
+  <project path="packages/resources/devicesettings" name="MoKee/android_packages_resources_devicesettings" />
+
+  <!-- Device repositories that can be translated -->
+  <project path="device/oneplus/common" name="MoKee/android_device_oneplus_common" />
+
+  <project path="hardware/samsung" name="MoKee/android_hardware_samsung" />
+</manifest>

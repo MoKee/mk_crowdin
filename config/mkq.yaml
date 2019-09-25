@@ -418,28 +418,28 @@ files:
   #   languages_mapping: *anchor
 
   # MKCenter2
-  # -
-  #   source:      '/packages/apps/MKCenter2/app/src/main/res/values/plurals.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/MKCenter2/app/src/main/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKCenter2/app/src/main/res/values/plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKCenter2/app/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # MKParts
-  # -
-  #   source:      '/packages/apps/MKParts/res/values/mk_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/MKParts/res/values/plurals.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/MKParts/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKParts/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKParts/res/values/plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MKParts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Phonograph
   -
@@ -530,22 +530,16 @@ files:
 # Resources
 
   # Aegis
-  # -
-  #   source:      '/packages/resources/Aegis/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-
-  # devicesettings
-  # -
-  #   source:      '/packages/resources/devicesettings/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/resources/Aegis/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # MoKeePay
-  # -
-  #   source:      '/packages/resources/MoKeePay/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/resources/MoKeePay/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
 # Services
 
@@ -563,14 +557,20 @@ files:
 
 # Device specific
 
-  # Device - OnePlus Common
+  # OnePlus Common ConfigPanel
   # -
   #   source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
   #   translation: '/%original_path%-%android_code%/%original_file_name%'
   #   languages_mapping: *anchor
 
-  # Hardware/samsung/AdvancedDisplay
+  # Samsung AdvancedDisplay
   # -
   #   source:      '/hardware/samsung/AdvancedDisplay/res/values/strings.xml'
+  #   translation: '/%original_path%-%android_code%/%original_file_name%'
+  #   languages_mapping: *anchor
+
+  # Resources DeviceSettings
+  # -
+  #   source:      '/packages/resources/devicesettings/res/values/strings.xml'
   #   translation: '/%original_path%-%android_code%/%original_file_name%'
   #   languages_mapping: *anchor
