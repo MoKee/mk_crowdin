@@ -264,16 +264,16 @@ files:
 # MoKee SDK
 
   # mokee-sdk
-  # -
-  #   source:      '/mokee-sdk/mk/res/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/mokee-sdk/mokee/res/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # MKSettingsProvider
-  # -
-  #   source:      '/mokee-sdk/packages/MKSettingsProvider/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/mokee-sdk/packages/MKSettingsProvider/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
 # Packages
 
