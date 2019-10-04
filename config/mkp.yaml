@@ -421,16 +421,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # MKCenter2
-  -
-    source:      '/packages/apps/MKCenter2/app/src/main/res/values/plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/MKCenter2/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # MKParts
   -
     source:      '/packages/apps/MKParts/res/values/mk_strings.xml'
@@ -442,6 +432,16 @@ files:
     languages_mapping: *anchor
   -
     source:      '/packages/apps/MKParts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # MoKeeCenter
+  -
+    source:      '/packages/apps/MoKeeCenter/app/src/main/res/values/plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/MoKeeCenter/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
