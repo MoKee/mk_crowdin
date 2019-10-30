@@ -384,10 +384,10 @@ files:
   #   languages_mapping: *anchor
 
   # Email
-  # -
-  #   source:      '/packages/apps/Email/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Email/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # FMRadio
   # -
@@ -408,14 +408,14 @@ files:
     languages_mapping: *anchor
 
   # Messaging
-  # -
-  #   source:      '/packages/apps/Messaging/res/values/mk_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Messaging/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Messaging/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Messaging/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # MKParts
   -
