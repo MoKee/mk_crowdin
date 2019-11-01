@@ -1,4 +1,4 @@
-# crowdin_mk.yaml
+# mko-mr1.yaml
 #
 # Crowdin configuration file for MoKee Open Source
 #
@@ -422,13 +422,13 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # MKCenter2
+  # MoKeeCenter
   -
-    source:      '/packages/apps/MKCenter2/app/src/main/res/values/plurals.xml'
+    source:      '/packages/apps/MoKeeCenter/app/src/main/res/values/plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/packages/apps/MKCenter2/app/src/main/res/values/strings.xml'
+    source:      '/packages/apps/MoKeeCenter/app/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
