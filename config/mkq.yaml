@@ -390,10 +390,10 @@ files:
     languages_mapping: *anchor
 
   # FMRadio
-  # -
-  #   source:      '/packages/apps/FMRadio/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/FMRadio/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Gallery2
   -
