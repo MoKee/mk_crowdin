@@ -330,38 +330,38 @@ files:
   #   source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/mk_strings.xml'
   #   translation: '/%original_path%-%android_code%/%original_file_name%'
   #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_arrays.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/calldetails/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_plurals.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_arrays.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/calldetails/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_plurals.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/callstats/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_arrays.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   # -
   #   source:      '/packages/apps/Dialer/java/com/android/dialer/precall/impl/res/values/strings.xml'
   #   translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -378,10 +378,10 @@ files:
   #   source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/strings.xml'
   #   translation: '/%original_path%-%android_code%/%original_file_name%'
   #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Email
   -
