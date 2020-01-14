@@ -1,4 +1,4 @@
-# mkq.yaml
+# mkq-mr1.yaml
 #
 # Crowdin configuration file for MoKee Open Source
 #
@@ -17,7 +17,7 @@
 # limitations under the License.
 
 api_key_env: MK_CROWDIN_API_KEY
-base_path_env: MK_CROWDIN_BASE_PATH_MKQ
+base_path_env: MK_CROWDIN_BASE_PATH_MKQ_MR1
 project_identifier: mokee-opensource
 preserve_hierarchy: true
 

@@ -25,14 +25,14 @@ Each MoKee version requires a different environment variable set for the base pa
     export MK_CROWDIN_API_KEY=your_api_key
     export MK_CROWDIN_BASE_PATH_MKO_MR1=your_mko-mr1_base_path
     export MK_CROWDIN_BASE_PATH_MKP=your_mkp_base_path
-    export MK_CROWDIN_BASE_PATH_MKQ=your_mkq_base_path
+    export MK_CROWDIN_BASE_PATH_MKQ_MR1=your_mkq-mr1_base_path
 
 Example:
 
     export MK_CROWDIN_API_KEY=1234567890
     export MK_CROWDIN_BASE_PATH_MKO_MR1=/mnt/android/mokee/mko-mr1
     export MK_CROWDIN_BASE_PATH_MKP=/mnt/android/mokee/mkp
-    export MK_CROWDIN_BASE_PATH_MKQ=/mnt/android/mokee/mkq
+    export MK_CROWDIN_BASE_PATH_MKQ_MR1=/mnt/android/mokee/mkq-mr1
 
 Execute:
 
