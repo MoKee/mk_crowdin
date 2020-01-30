@@ -299,7 +299,7 @@ files:
 
   # Camera2
   -
-    source:      '/packages/apps/Camera2/app/src/main/res/values/ext_strings.xml'
+    source:      '/packages/apps/Camera2/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -316,14 +316,6 @@ files:
     languages_mapping: *anchor
 
   # Dialer
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/contacts/common/res/values/mk_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/mk_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
   -
     source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/ext_arrays.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -333,11 +325,19 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/app/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
     source:      '/packages/apps/Dialer/java/com/android/dialer/calldetails/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
     source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/ext_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/calllogutils/res/values/mk_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
@@ -356,22 +356,18 @@ files:
     source:      '/packages/apps/Dialer/java/com/android/dialer/lookup/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/dialer/precall/impl/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/incallui/contactgrid/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/mk_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-  # -
-  #   source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/main/impl/bottomnav/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/dialer/main/impl/toolbar/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/mk_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   -
     source:      '/packages/apps/Dialer/java/com/android/incallui/res/values/ext_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
@@ -392,12 +388,6 @@ files:
   # Gallery2
   -
     source:      '/packages/apps/Gallery2/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # Lawnchair
-  -
-    source:      '/packages/apps/Lawnchair/lawnchair/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -470,10 +460,10 @@ files:
     languages_mapping: *anchor
 
   # SettingsIntelligence
-  # -
-  #   source:      '/packages/apps/SettingsIntelligence/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/SettingsIntelligence/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # SetupWizard
   -
@@ -559,12 +549,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Telephony
-  # -
-  #   source:      '/packages/services/Telephony/res/values/ext_strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
-
 # Device specific
 
   # OnePlus Common ConfigPanel
@@ -572,12 +556,6 @@ files:
     source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
-  # Samsung AdvancedDisplay
-  # -
-  #   source:      '/hardware/samsung/AdvancedDisplay/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
 
   # Resources DeviceSettings
   -
