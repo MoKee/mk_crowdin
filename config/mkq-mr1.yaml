@@ -476,10 +476,10 @@ files:
   #   languages_mapping: *anchor
 
   # SetupWizard
-  # -
-  #   source:      '/packages/apps/SetupWizard/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/apps/SetupWizard/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # SimpleCommons
   -
