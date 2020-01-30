@@ -568,10 +568,10 @@ files:
 # Device specific
 
   # OnePlus Common ConfigPanel
-  # -
-  #   source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/device/oneplus/common/configpanel/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
   # Samsung AdvancedDisplay
   # -
@@ -580,7 +580,7 @@ files:
   #   languages_mapping: *anchor
 
   # Resources DeviceSettings
-  # -
-  #   source:      '/packages/resources/devicesettings/res/values/strings.xml'
-  #   translation: '/%original_path%-%android_code%/%original_file_name%'
-  #   languages_mapping: *anchor
+  -
+    source:      '/packages/resources/devicesettings/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
