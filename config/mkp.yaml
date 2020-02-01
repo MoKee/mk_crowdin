@@ -405,12 +405,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Lawnchair
-  -
-    source:      '/packages/apps/Lawnchair/lawnchair/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # Messaging
   -
     source:      '/packages/apps/Messaging/res/values/mk_strings.xml'
