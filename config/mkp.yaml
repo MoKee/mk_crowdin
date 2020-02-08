@@ -297,16 +297,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Calendar
-  -
-    source:      '/packages/apps/Calendar/app/src/main/res/values/mk_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Calendar/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # Camera2
   -
     source:      '/packages/apps/Camera2/app/src/main/res/values/ext_strings.xml'
@@ -399,12 +389,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Gallery2
-  -
-    source:      '/packages/apps/Gallery2/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # Messaging
   -
     source:      '/packages/apps/Messaging/res/values/mk_strings.xml'
@@ -439,16 +423,6 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-  # Phonograph
-  -
-    source:      '/packages/apps/Phonograph/app/src/main/res/values/mk_strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-  -
-    source:      '/packages/apps/Phonograph/app/src/main/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
   # Recorder
   -
     source:      '/packages/apps/Recorder/app/src/main/res/values/strings.xml'
@@ -478,12 +452,6 @@ files:
   # SetupWizard
   -
     source:      '/packages/apps/SetupWizard/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # SimpleCommons
-  -
-    source:      '/packages/apps/SimpleCommons/commons/src/main/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -536,12 +504,6 @@ files:
   # Aegis
   -
     source:      '/packages/resources/Aegis/res/values/strings.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
-
-  # MoKeePay
-  -
-    source:      '/packages/resources/MoKeePay/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
