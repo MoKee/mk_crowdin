@@ -297,6 +297,12 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+  # Backgrounds
+  -
+    source:      '/packages/apps/Backgrounds/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
   # Camera2
   -
     source:      '/packages/apps/Camera2/res/values/ext_strings.xml'
