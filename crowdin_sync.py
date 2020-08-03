@@ -281,8 +281,9 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
         repo.git.push(f'ssh://{username}@mokeedev.review:29418/{name}',
                       f'HEAD:refs/for/{branch}%topic=translation')
         print('Success')
-    except:
-        print('Failed', file=sys.stderr)
+    except Exception as e:
+        print(e, '\nFailed to push!', file=sys.stderr)
+        return
 
     _COMMITS_CREATED = True
 
